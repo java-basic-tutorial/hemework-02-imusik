@@ -1,5 +1,6 @@
 package com.softserveinc;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /*
@@ -21,7 +22,27 @@ import java.util.Scanner;
  */
 public class Task03 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        int value;
+        int[] newValues= new int[10];
+        int j = 0;
+        do {
+            System.out.print(">>> ");
+            Scanner scanner = new Scanner(System.in);
+            value = scanner.nextInt();
+            if (value>0) {
+                newValues[j]=value;
+                j++;
+            }
+        } while (value>0);
+        int min = newValues[0];
+        for (int i = 0; i < j; i++) {
+            int tempValue = newValues[i];
+            if (tempValue>0&&tempValue<min) {
+                min = tempValue;
+            }
+        }
+        System.out.println("Minimum number is " + min);
+
         // TODO: Write your code here
 
     }

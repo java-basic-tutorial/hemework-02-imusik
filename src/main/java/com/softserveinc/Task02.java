@@ -31,8 +31,29 @@ import java.util.Scanner;
  */
 public class Task02 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        // TODO: Write your code here
 
+        System.out.print("t1 >>> ");
+        Scanner scannerT1 = new Scanner(System.in);
+        double t1 = scannerT1.nextDouble();
+
+        System.out.print("t2 >>> ");
+        Scanner scannerT2 = new Scanner(System.in);
+        double t2 = scannerT2.nextDouble();
+
+        System.out.print("dt >>> ");
+        Scanner scannerDt = new Scanner(System.in);
+        double dt = scannerDt.nextDouble();
+
+        System.out.println("---------------------------");
+        System.out.println("|   C             F        ");
+        System.out.println("---------------------------");
+
+        double tempT = t1;
+        while (tempT <= t2){
+            double tempF = 1.8 * tempT + 32;
+            System.out.printf("|  %.2f     %.2f\n", tempT, tempF);
+            tempT = tempT + dt;
+        }
+        System.out.println("---------------------------");
     }
 }
